@@ -1,0 +1,26 @@
+{
+  "name": "todo-server",
+  "version": "1.0.0",
+  "description": "RESTful web services for todo list data",
+  "main": "server.js",
+  "scripts": {
+    "test": "",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daneguevara/todo-server.git"
+  },
+  "author": "Dane Guevara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daneguevara/todo-server/issues"
+  },
+  "homepage": "https://github.com/daneguevara/todo-server#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0"
+  }
+}
