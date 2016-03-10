@@ -1,12 +1,14 @@
 // require node packages
-var express = require('express');
-var mongoose = require('mongoose');
-var morgan = require('morgan');
 var bodyParser = require('body-parser');
+var cors = require('cors');
+var express = require('express');
+var morgan = require('morgan');
+var mongoose = require('mongoose');
 
 // application setup
 var app = express();
 var port = 9999;
+app.use(cors());
 app.use(morgan('dev')); // log requests to the console
 app.use(bodyParser.json()); // parse bodies for requests with the content-type header of application/json
 

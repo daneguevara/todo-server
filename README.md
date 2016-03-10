@@ -11,7 +11,6 @@ mongo // open mongo shell
 ```
 
 Clone this repository
-
 ```
 https://github.com/daneguevara/todo-server
 ```
