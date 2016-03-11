@@ -7,8 +7,6 @@ Install and start mongodb
 brew install mongodb // mac osx
 brew services
 brew services start mongodb
-...
-brew info mongodb // caveats section indicates how to run the daemon
 ```
 
 Clone the repository
