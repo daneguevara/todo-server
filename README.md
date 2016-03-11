@@ -41,7 +41,7 @@ var Todo = mongoose.model('Todo', {
 ```
 
 ## GET /api/todos
-Return all todos
+Return an array of all todos
 
 ## POST /api/todos
 Create a new todo
