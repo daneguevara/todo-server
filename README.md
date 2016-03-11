@@ -1,31 +1,47 @@
-# todo-server
+# Todo Services
+Node.js web server for providing RESTful services for todo list todos.
 
 # Installation
-Install mongodb, run the mongo daemon, and set up a todo database
+Install and start mongodb
 ```
-brew install mongodb
+brew install mongodb // mac osx
+brew services
+brew services start mongodb
 ...
 brew info mongodb // caveats section indicates how to run the daemon
-...
-mongo // open mongo shell
+
+
+Clone the repository
+```
+git clone https://github.com/daneguevara/todo-services
 ```
 
-Clone this repository
-```
-https://github.com/daneguevara/todo-server
-```
-
-Install node packages
+Install packages and start server
 ```
 npm install
-```
-
-Start server
-```
+...
 npm start
 ```
 
 # REST API
+
+## Todo object
+```js
+var Todo = mongoose.model('Todo', {
+  text: String,
+  done: Boolean,
+  archived: Boolean
+});
+
+// Example
+{
+  _id: 'abc123',
+  text: 'create a todo web application.'
+  completed: false,
+  archived: false
+}
+```
+
 ## GET /api/todos
 Return all todos
 

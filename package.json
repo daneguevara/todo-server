@@ -1,5 +1,5 @@
 {
-  "name": "todo-server",
+  "name": "todo-services",
   "version": "1.0.0",
   "description": "RESTful web services for todo list data",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daneguevara/todo-server.git"
+    "url": "git+https://github.com/daneguevara/todo-services.git"
   },
   "author": "Dane Guevara",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daneguevara/todo-server/issues"
+    "url": "https://github.com/daneguevara/todo-services/issues"
   },
-  "homepage": "https://github.com/daneguevara/todo-server#readme",
+  "homepage": "https://github.com/daneguevara/todo-services#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",

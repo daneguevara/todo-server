@@ -1,19 +1,20 @@
-// require node packages
+'use strict';
+
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var express = require('express');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 
-// application setup
 var app = express();
 var port = 9999;
 app.use(cors());
 app.use(morgan('dev')); // log requests to the console
 app.use(bodyParser.json()); // parse bodies for requests with the content-type header of application/json
 
-// connect to mongodb and intialize Todo model
+// connect to mongodb
 mongoose.connect('mongodb://localhost/todo');
+
 var Todo = mongoose.model('Todo', {
   text: String,
   done: Boolean,
