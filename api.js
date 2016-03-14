@@ -1,15 +1,7 @@
-'use strict';
-
-var mongoose = require('mongoose');
-
-var Todo = mongoose.model('Todo', {
-  text: String,
-  done: Boolean,
-  archived: Boolean
-});
+var Todo = require('./models/todo');
 
 module.exports = {
-
+  todo: {
     // return all todos
     get: function (req, res) {
       Todo.find(function (err, todos) {
@@ -30,15 +22,16 @@ module.exports = {
 
     // update a todo
     put: function (req, res) {
-      Todo.update({_id: req.params.id}, req.body, function (err, updated) {
+      Todo.update({ _id: req.params.id }, req.body, function (err, updated) {
         res.send(err || updated);
       });
     },
 
     // remove a todo
     delete: function (req, res) {
-      Todo.remove({_id: req.params.id}, function (err, deleted) {
+      Todo.remove({ _id: req.params.id }, function (err, deleted) {
         res.send(err || deleted);
       });
     }
+  }
 };
