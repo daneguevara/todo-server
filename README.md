@@ -1,10 +1,11 @@
 # Todo Services
-Node.js web server for providing RESTful services for todo list todos.
+Node.js web server for providing RESTful services for todos.
 
 # Installation
 Install and start mongodb
 ```
-brew install mongodb // mac osx
+// mac osx
+brew install mongodb
 brew services
 brew services start mongodb
 ```
