@@ -3,8 +3,8 @@
 describe('api/todo', function () {
 
   beforeEach(function () {
-    this.api = require('../controllers/api')
-    this.Todo = require('../models/todo');
+    this.api = require('../../controllers/api')
+    this.Todo = require('../../models/todo');
 
     spyOn(this.Todo, 'find');
     spyOn(this.Todo, 'findById');
