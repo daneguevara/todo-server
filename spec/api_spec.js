@@ -3,20 +3,33 @@
 describe('api/todo', function () {
 
   beforeEach(function () {
-    this.api = require('../api')
+    this.api = require('../controllers/api')
     this.Todo = require('../models/todo');
 
     spyOn(this.Todo, 'find');
+    spyOn(this.Todo, 'findById');
     spyOn(this.Todo, 'create');
     spyOn(this.Todo, 'update');
     spyOn(this.Todo, 'remove');
   });
 
-  describe('get', function () {
+  describe('index', function () {
     it('finds all todos in the db', function () {
-      this.api.todo.get();
+      this.api.todo.index();
 
       expect(this.Todo.find).toHaveBeenCalled();
+    });
+  });
+
+  describe('show', function () {
+    it('finds a todo in the db', function () {
+      this.api.todo.show({
+        params: {
+          id: '123'
+        }
+      });
+
+      expect(this.Todo.findById).toHaveBeenCalledWith('123', jasmine.any(Function));
     });
   });
 

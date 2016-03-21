@@ -1,6 +1,6 @@
 'use strict';
 
-var api = require('./api');
+var api = require('./controllers/api');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var express = require('express');
@@ -16,7 +16,8 @@ app.use(bodyParser.json()); // parse bodies for requests with the content-type h
 mongoose.connect('mongodb://localhost/todo');
 
 // routes
-app.get('/api/todos', api.todo.get);
+app.get('/api/todos', api.todo.index);
+app.get('/api/todos/:id', api.todo.show);
 app.post('/api/todos', api.todo.post);
 app.put('/api/todos/:id', api.todo.put);
 app.delete('/api/todos/:id', api.todo.delete);
